@@ -18,13 +18,13 @@ export default function GiftPage() {
     music.volume = 0.4
 
     // 2. Play the track
-    // music
-    //   .play()
-    //   .then(() => setMusicOn(true))
-    //   .catch((err) => {
-    //     console.log("Autoplay blocked by browser:", err)
-    //     setMusicOn(false)
-    //   })
+    music
+      .play()
+      .then(() => setMusicOn(true))
+      .catch((err) => {
+        console.log("Autoplay blocked by browser:", err)
+        setMusicOn(false)
+      })
 
     // 3. CRITICAL CLEANUP: Stops music when component dies
     return () => {
@@ -417,6 +417,7 @@ export default function GiftPage() {
           Open My Gift 🎁
         </button>
       </section> */}
+
       <section className="relative overflow-hidden px-6 py-32">
         {/* Background Glow */}
 
