@@ -36,11 +36,20 @@ export default function IdentityScanner({
   useEffect(() => {
     if (status !== "success") return
 
-    const timer = setTimeout(() => {
-      router.push("/welcome")
-    }, 3000)
+    const setCookie = async () => {
+      const res = await fetch("/api/auth/verify", {
+        method: "POST",
+      })
 
-    return () => clearTimeout(timer)
+      if (!res.ok) {
+        console.error("Failed to set authentication cookie")
+        return
+      }
+
+      router.push("/surprise")
+    }
+
+    setCookie()
   }, [status, router])
 
   return (
