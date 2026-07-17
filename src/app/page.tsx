@@ -427,8 +427,6 @@ export default function Home() {
 
           <p className="mt-8 text-center text-sm leading-7 text-slate-400">
             This place wasn't built for everyone.
-            <br />
-            It was made for someone very special.
           </p>
         </motion.form>
 
