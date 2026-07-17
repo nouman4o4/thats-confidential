@@ -56,6 +56,29 @@ export default function Home() {
 
     setStepStatus(["loading", "pending", "pending"])
 
+    const response = await fetch("/api/visitor", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        enteredDay: dob.day,
+        enteredMonth: dob.month,
+        enteredSecondMonth: dob.seccondMonth,
+        enteredYear: dob.year,
+
+        passedAuthentication: verificatonSuccess,
+      }),
+    })
+    if (!response.ok) {
+      console.log("something went wrong")
+      console.log(response)
+    }
+    const jsonData = await response.json()
+    console.log(jsonData)
+
     await sleep(1200)
 
     setStatus("scanning")
