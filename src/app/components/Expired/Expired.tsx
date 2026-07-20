@@ -38,7 +38,7 @@ export default function ExpiredPage() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative mx-auto w-full max-w-3xl lg:rounded-[40px] border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur md:p-14"
+        className="relative mx-auto w-full max-w-3xl border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur lg:rounded-[40px] md:p-14"
       >
         {/* Icon */}
 
@@ -49,7 +49,7 @@ export default function ExpiredPage() {
         {/* Heading */}
 
         <h1 className="mt-10 text-center text-4xl font-black md:text-6xl">
-          You're Late...
+          You Missed It...
         </h1>
 
         <div className="mx-auto mt-6 h-px w-40 bg-gradient-to-r from-transparent via-rose-300 to-transparent" />
@@ -57,30 +57,55 @@ export default function ExpiredPage() {
         {/* Message */}
 
         <div className="mt-10 space-y-7 text-center text-lg leading-9 text-zinc-300 md:text-xl">
-          <p>This website wasn't meant to stay here forever.</p>
+          <p>There was once a little surprise here.</p>
 
           <p>
-            It was a small birthday surprise... created especially for
-            <span className="font-semibold text-rose-300"> 18th July.</span>
-          </p>
-
-          <p>
-            It quietly waited until
-            <span className="font-semibold text-rose-300"> 20th July, </span>
-            hoping its only visitor would open it.
-          </p>
-
-          <p>But... that moment never came.</p>
-
-          <p>
-            So just like birthdays, this little surprise has now become
-            <span className="italic text-rose-300"> a memory.</span>
-          </p>
-
-          <p className="pt-4 text-base text-zinc-500">
-            This page has now been archived.
+            It wasn't made for everyone...
             <br />
-            Only the administrator can access it.
+            It was created for
+            <span className="font-semibold text-rose-300">
+              {" "}
+              one special person
+            </span>
+            , with excitement, hours of work, and a hope that it would be opened
+            on
+            <span className="font-semibold text-rose-300">
+              {" "}
+              when the moment was just right.
+            </span>
+          </p>
+
+          <p>
+            It stayed here quietly until
+            <span className="font-semibold text-rose-300">
+              {" "}
+              20th July,
+            </span>{" "}
+            patiently waiting for that one visitor.
+          </p>
+
+          <p>
+            But...
+            <br />
+            that moment never came.
+          </p>
+
+          <p>
+            Some moments are only beautiful because they happen at the right
+            time.
+            <br />
+            This was one of them.
+          </p>
+
+          <p className="font-medium italic text-rose-300">
+            "Some gifts lose their magic when they're opened too late."
+          </p>
+
+          <p className="pt-4 text-base leading-8 text-zinc-500">
+            This little corner of the internet has now been archived.
+            <br />
+            The celebration is over, and only the administrator can access it
+            now.
           </p>
         </div>
 
@@ -88,7 +113,7 @@ export default function ExpiredPage() {
 
         <div className="mt-14 flex items-center justify-center gap-3 text-zinc-500">
           <Lock className="h-5 w-5" />
-          <span className="text-sm tracking-[0.25em] uppercase">
+          <span className="text-sm uppercase tracking-[0.25em]">
             ACCESS CLOSED
           </span>
         </div>
